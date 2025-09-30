@@ -1,0 +1,26 @@
+_message_before_copy: |
+  Copier - update test
+
+  #####################################################################
+
+# questions
+project_name:
+  help: Project Name
+  default: jaffle_shop
+
+key1:
+  help: Key 1
+  default: value1
+key2:
+  help: Key 2
+  default: value2
+
+_message_after_copy: |
+  #####################################################################
+
+  Project initialized
+
+_message_after_update: |
+  #####################################################################
+
+  Project updated

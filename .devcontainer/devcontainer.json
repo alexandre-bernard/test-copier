@@ -1,0 +1,36 @@
+{
+    "name": "test-copier",
+    "image": "python:3.12",
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {},
+        "ghcr.io/devcontainers-extra/features/pipx-package:1": {
+            "package": "shandy-sqlfmt[jinjafmt]"
+        },
+        "ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
+    },
+    "postCreateCommand": "git config core.editor 'code --wait'",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "mhutchie.git-graph",
+                "eamodio.gitlens",
+                "usernamehw.errorlens"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "files.associations": {
+                    "*.sql": "jinja-sql"
+                },
+                "dbt.sqlFmtAdditionalParams": [
+                    "--line-length",
+                    "140"
+                ],
+                "[jinja-sql]": {
+                    "editor.formatOnSave": true
+                }
+            }
+        }
+    },
+    "mounts": [],
+    "containerEnv": {}
+}
