@@ -5,7 +5,7 @@ _message_before_copy: |
 
 # questions
 project_name:
-  help: Project Name
+  help: Project Name for test
   default: jaffle_shop
 
 key1:
